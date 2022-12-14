@@ -1,34 +1,34 @@
 # Questions for quiz
 
-Question 1:
+Question1,
 How would you like to be known in history?
 a) The wise
 b) The good
 c) The bold
 d) The Great
 
-Question 2:
+Question 2,
 Which Quality best describes you:
 a) Brave
 b) Intelligent
 c) Ambitious
 d) Empathetic
 
-Question 3:
+Question 3,
 Would you rather haave a potion that grants you..?
 a) Glory
 b) Wisdom
 c) Love
 d) Power
 
-Question 4:
+Question 4,
 You are trapped in a burning building and dont have long to escape! What do you do?
 a) Run and Grab your friend thats also trapped
 b) Save yourself, of course!!
 c) Give it a shot but your not sure you can save your friend
 d) It depends if you can save your friend you will, if not...your just gonna run.
 
-Question 5:
+Question 5,
 Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. 
 If it lured you, it would smell of:
 a) A crackling log fire
@@ -36,14 +36,14 @@ b) The sea
 c) Home
 d) Fresh parchment
 
-Question 6:
+Question 6,
 Four goblets are placed before you. Which would you choose to drink?
 a) The golden liquid.
 b) The foaming, frothing, silvery liquid 
 c) The smooth, thick, richly purple drink.
 d) The mysterious black liquid.
 
-Question 7:
+Question 7,
 Which of the following would you most hate people to call you?
 a) Cowardly
 b) Ordinary
