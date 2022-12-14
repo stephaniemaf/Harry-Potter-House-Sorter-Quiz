@@ -21,4 +21,16 @@ def welcome_message():
     print("")
     print("*" *80)
 
+
+
+def questions_for_quiz():
+    questions = [{"question":"How would you like to be known in history?",
+     "choices":["The wise", "The good", "The bold", "The Great"
+                ]}]
+
+    print(questions)
+
+
 welcome_message()
+questions_for_quiz()
+
