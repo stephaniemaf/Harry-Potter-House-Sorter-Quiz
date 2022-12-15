@@ -2,11 +2,12 @@
 variables for storing user answers
 """
 
-GRYFFINDOR = 0
-HUFFLEPUFF = 0
-RAVENCLAW = 0
-SLYTHERIN = 0
-
+HOUSES = {
+ "GRYFFINDOR": 0,
+ "HUFFLEPUFF": 0,
+ "RAVENCLAW": 0,
+ "SLYTHERIN": 0,
+}
 
 def welcome_message():
     """
@@ -34,27 +35,44 @@ def questions_for_quiz():
     variables to store answers for questions to show which house user belongs
     too, and underneath this is a list of dictionaries to store the questions
     """
-    global RAVENCLAW, GRYFFINDOR, HUFFLEPUFF, SLYTHERIN
+    global HOUSES
     questions = [{
                     "question": "How would you like to be known in history?",
-                    "choices": [("a) The wise",RAVENCLAW), "b) The good", "c) The bold",
-                    "d) The Great"
-                ]},
+                    "choices": [
+                        ("a) The wise", "RAVENCLAW"),
+                        ("b) The good", "GRYFFINDOR"),
+                        ("c) The bold", "HUFFLEPUFF"),
+                        ("d) The Great", "SLYTHERIN"),
+                    ]
+                },
                 {
                     "question": "Which Quality best describes you?",
-                    "choices": [("a) Brave",GRYFFINDOR),"b) Intelligent","c) Ambitious",
-                    "d) Empathetic"
-                ]},
+                    "choices": [
+                        ("a) Brave", "GRYFFINDOR"),
+                        ("b) Intelligent", "RAVENCLAW"),
+                        ("c) Ambitious", "SLYTHERIN"),
+                        ("d) Empathetic", "HUFFLEPUFF"),
+                    ]
+                },
                 {
                     "question": "Which potion would you rather have?",
-                    "choices": [("a) Glory",HUFFLEPUFF), "b) Wisdom", "c) Love", "d) Power",
-                ]},
+                    "choices": [
+                        ("a) Glory", "GRYFFINDOR"), 
+                        ("b) Wisdom", "RAVENCLAW"), 
+                        ("c) Love", "HUFFLEPUFF"),
+                        ("d) Power", "SLYTHERIN"),
+                    ]
+                },
                 {
-                    "question": "You're trapped in a burning building.What do you do?",
-                    "choices": [("a) Run and Grab your friend thats also trapped",RAVENCLAW),
-                    "b) Save yourself, of course!!", 
-                    "c) Give it a shot but your not sure you can save your friend",
-                    "d) It depends if you can save your friend you will, if not...your just gonna run."]
+                    "question": "You're trapped in a burning"
+                    + "building.What do you do?",
+                    "choices": [
+                        ("a) Run and Grab your friend whos trapped too", "GRYFFINDOR"),
+                        ("b) Save yourself, of course!!", "SLYTHERIN"),
+                        ("c) Give it a shot but your not sure you can save your friend", "HUFFLEPUFF"),
+                        ("d) It depends if you can save your friend you will,"
+                         + "if not...your just gonna run.", "RAVENCLAW"),
+                    ]
                 }]
     
     for question in questions:
