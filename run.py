@@ -75,16 +75,21 @@ def questions_for_quiz():
                     ]
                 }]
     
-    for question in questions:
+    question_num = 0
+    while(question_num < len(questions)):
+        question = questions[question_num]
         print(question["question"])
-        print("")
+        print()
         print("Choices:")
         for i in question["choices"]:
             print(i[0])
         
         guess = input("Please enter you answer: ")
+        house = ""
         if guess == "a":
-            question["choices"][0][1] += 1
+            house = question["choices"][0][1]
+            question_num += 1
+            HOUSES[house] += 1
         elif guess == "b":
             HUFFLEPUFF += 1
         elif guess == "c":
@@ -99,8 +104,8 @@ def sort_into_house():
     """
     conditional statement to sort user into house
     """
-    print(RAVENCLAW)
-    if GRYFFINDOR > max(HUFFLEPUFF, RAVENCLAW, SLYTHERIN):
+    max_other = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
+    if HOUSES["GRYFFINDOR"] > max_other:
         print("you have been sorted into gryffindor")
     elif RAVENCLAW > max(HUFFLEPUFF, GRYFFINDOR, SLYTHERIN):
         print("you have been sorted into Ravenclaw")
