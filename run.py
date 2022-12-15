@@ -76,7 +76,8 @@ def questions_for_quiz():
                 }]
     
     question_num = 0
-    while(question_num < len(questions)):
+
+    while (question_num < len(questions)):
         question = questions[question_num]
         print(question["question"])
         print()
@@ -91,11 +92,17 @@ def questions_for_quiz():
             question_num += 1
             HOUSES[house] += 1
         elif guess == "b":
-            HUFFLEPUFF += 1
+            house = question["choices"][1][1]
+            question_num += 1
+            HOUSES[house] += 1
         elif guess == "c":
-            GRYFFINDOR += 1
+            house = question["choices"][2][1]
+            question_num += 1
+            HOUSES[house] += 1
         elif guess == "d":
-            SLYTHERIN += 1
+            house = question["choices"][3][1]
+            question_num += 1
+            HOUSES[house] += 1
         else:
             print("Unknown entry please try again")
 
@@ -104,14 +111,17 @@ def sort_into_house():
     """
     conditional statement to sort user into house
     """
-    max_other = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
-    if HOUSES["GRYFFINDOR"] > max_other:
+    max_one = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
+    max_two = max(HOUSES["HUFFLEPUFF"], HOUSES["GRYFFINDOR"], HOUSES["SLYTHERIN"])
+    max_three = max(HOUSES["GRYFFINDOR"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
+    max_four = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["GRYFFINDOR"])
+    if HOUSES["GRYFFINDOR"] > max_one:
         print("you have been sorted into gryffindor")
-    elif RAVENCLAW > max(HUFFLEPUFF, GRYFFINDOR, SLYTHERIN):
+    elif HOUSES["RAVENCLAW"] > max_two:
         print("you have been sorted into Ravenclaw")
-    elif HUFFLEPUFF > max(GRYFFINDOR, RAVENCLAW, SLYTHERIN):
+    elif HOUSES["HUFFLEPUFF"] > max_three:
         print("you have been sorted into hufflepuff")
-    elif SLYTHERIN > max(GRYFFINDOR, RAVENCLAW, SLYTHERIN):
+    elif HOUSES["SLYTHERIN"] > max_four:
         print("you have been sorted into slytherin")
     else:
         print("hmm you dont seem to be in any house you can pick your own ")
