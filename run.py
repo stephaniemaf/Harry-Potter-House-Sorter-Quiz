@@ -1,7 +1,11 @@
 """
-variables to store answers for questions to show which house user belongs too
+variables for storing user answers
 """
 
+GRYFFINDOR = 0
+HUFFLEPUFF = 0
+RAVENCLAW = 0
+SLYTHERIN = 0
 
 
 def welcome_message():
@@ -22,15 +26,12 @@ def welcome_message():
     print("*" * 80)
 
 
-def questions_for_quiz():
+def questions_for_quiz(GRYFFINDOR, RAVENCLAW, HUFFLEPUFF, SLYTHERIN):
 
     """
-    dictionary of questions to be presented to the user
+    variables to store answers for questions to show which house user belongs
+    too, and underneath this is a list of dictionaries to store the questions
     """
-    gryffindor = 0
-    hufflepuff = 0
-    ravenclaw = 0
-    slytherin = 0
 
     questions = [{
                     "question": "How would you like to be known in history?",
@@ -48,8 +49,9 @@ def questions_for_quiz():
                 ]},
                 {
                     "question": "You're trapped in a burning building.What do you do?",
-                    "choices": ["a) Run and Grab your friend thats also trapped", 
-                    "b) Save yourself, of course!!", "c) Give it a shot but your not sure you can save your friend",
+                    "choices": ["a) Run and Grab your friend thats also trapped",
+                    "b) Save yourself, of course!!", 
+                    "c) Give it a shot but your not sure you can save your friend",
                     "d) It depends if you can save your friend you will, if not...your just gonna run."]
                 }]
               
@@ -62,16 +64,34 @@ def questions_for_quiz():
 
         guess = input("Please enter you answer: ")
         if guess == "a":
-            ravenclaw += 1
+            RAVENCLAW += 1
         elif guess == "b":
-            hufflepuff += 1
+            HUFFLEPUFF += 1
         elif guess == "c":
-            gryffindor += 1
+            GRYFFINDOR += 1
         elif guess == "d":
-            slytherin += 1
+            SLYTHERIN += 1
         else:
             print("Unknown entry please try again")
 
 
+def sort_into_house():
+    """
+    conditional statement to sort user into house
+    """
+
+    if GRYFFINDOR > RAVENCLAW and GRYFFINDOR > HUFFLEPUFF and GRYFFINDOR > SLYTHERIN:
+        print("you in gryffindor")
+    elif RAVENCLAW > GRYFFINDOR and RAVENCLAW > HUFFLEPUFF and RAVENCLAW > SLYTHERIN:
+        print("you are in Ravenclaw")
+    elif HUFFLEPUFF > GRYFFINDOR and HUFFLEPUFF > RAVENCLAW and HUFFLEPUFF > SLYTHERIN:
+        print("you are in hufflepuff")
+    elif SLYTHERIN > GRYFFINDOR and SLYTHERIN > RAVENCLAW and SLYTHERIN > HUFFLEPUFF:
+        print("you are in slytherin")
+    else:
+        print("hmm you dont seem to be in any house you can pick your own ")
+
+
 welcome_message()
-questions_for_quiz()
+questions_for_quiz(GRYFFINDOR, RAVENCLAW, HUFFLEPUFF, SLYTHERIN)
+sort_into_house()
