@@ -73,7 +73,38 @@ def questions_for_quiz():
                         ("d) It depends if you can save your friend you will,"
                          + "if not...your just gonna run.", "RAVENCLAW"),
                     ]
-                }]
+                },
+                {
+                    "question": "Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary."
+                    + "If it lured you, it would smell of?",
+                    "choices": [
+                        ("a) A crackling log fire", "GRYFFINDOR" ),
+                        ("b) Fresh Parchment", "RAVENCLAW"),
+                        ("c) Home", "HUFFLEPUFF"),
+                        ("c) The sea", "SLYTHERIN"),
+                    ]
+                },
+                {
+                    "question": "Four goblets are placed before you. Which would you choose to drink?",
+                    "choices": [
+                        ("a) The mysterious black liquid.", "SLYTHERIN"),
+                        ("b) The smooth, thick, richly purple drink.", "HUFFLEPUFF"),
+                        ("c) The golden liquid.", "GRYFFINDOR"),
+                        ("d) The foaming, frothing, silvery liquid", "RAVENCLAW"),
+                    ]
+                },
+                {
+                    "question": "Which of the following would you most hate people to call you?",
+                    "choices": [
+                        ("a) Cowardly", "GRYFFINDOR"),
+                        ("b) Ordinary", "SLYTHERIN"),
+                        ("c) Selfish", "HUFFLEPUFF"),
+                        ("d) Ignorant", "RAVENCLAW"),
+                    ]
+                }
+                
+                
+                ]
     
     question_num = 0
 
