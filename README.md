@@ -1,31 +1,30 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Introduction
+This is a console quiz made in Python. The purpose of this quiz is to sort the user into one of the four Hogwarts houses where they will then spend the next 7 years studying magic. Partaking in this quiz will allow the user to answer 7 multiple choiced questions based on the four houses of Hogwarts. Each question has 4 choices and of those 4 choices each one corresponds to one of the four houses GRYFFINDOR, RAVENCLAW, HUFFLEPUFF AND SLYTHERIN. After answering all questions the user will then be told which house they have been sorted into.
 
-Welcome stephaniemaf,
+# How to begin
+In order to play this quiz you need you use your python terminal/console on your computer. You can copy the code from my github "stephaniemaf" (provide link)
+The user should enter "python3 run.py" and then the quiz should load up into the console and begin.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# Existing Features
 
-## Reminders
+## Welcome Message:
+Upon load up of the quiz the user is asked to enter theyre name, then they must press enter. After this they are met with a welcome message personalized to the user and an explenation of how the quiz works.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Questions:
+The user is then prompted to start answering questions, there are 7 in total.
 
-## Creating the Heroku app
+## Results:
+The user is then told what house they will be in for the duration of theyre stay in HOGWARTS.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# Testing
+* I started out this quiz with just a welcome message and asked the user to input theyre name i then used an f string to parse this to the welcome message so the message would be personal for the user. I tested this out before moving on with multiple names and it worked every time.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* Next i asked the user if they where ready to begin and asked them to press enter so as the questions would only show after a keypress. This also worked each time no problem.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* I then moved on to my questions which i stored in a list of dictionaries (map). I wanted to loop through the questions and have them print one at a time after the user answered the question. To do this i used a for loop, and an if statement to iterate of the questions, if the user entered the wrong letter(as the only possible answers are a,b,c,d) i wanted the question to be repeated without letting the user move on.As every time i tested my code by entering a wrong letter my print statement letting them know they entered the wrong letter would show up but the next question would be shown straight after that. I realised quickly my for loop was not going to work here so i replaced it with a while loop. I ran it muliple times and it was working well it repeated the same question untill the user entered a correct option.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* My next biggest issue was how i could store my question choices in the correct house variable with each house having a different letter associated with it for each question. To do this i used an array in the map and wrote my if statement to.....
 
-Connect your GitHub repository and deploy as normal.
+# Validator Testing
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+# Credits 

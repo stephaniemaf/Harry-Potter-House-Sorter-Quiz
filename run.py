@@ -81,7 +81,7 @@ def questions_for_quiz():
                         ("a) A crackling log fire", "GRYFFINDOR" ),
                         ("b) Fresh Parchment", "RAVENCLAW"),
                         ("c) Home", "HUFFLEPUFF"),
-                        ("c) The sea", "SLYTHERIN"),
+                        ("d) The sea", "SLYTHERIN"),
                     ]
                 },
                 {
@@ -158,6 +158,23 @@ def sort_into_house():
         print("hmm you dont seem to be in any house you can pick your own ")
 
 
+def other_houses():
+    global HOUSES
+    
+    houses = []
+    if "GRYFFINDOR" > 0:
+        houses.append("Gryffindor")
+    if "HUFFLEPUFF" > 0:
+        houses.append("Hufflepuff")
+    if "RAVENCLAW" > 0:
+        houses.append("Ravenclaw")
+    if "SLYTHERIN" > 0:
+        houses.append("Slytherin")
+
+    print("you could have been in....")
+    for house in houses:
+        print(house[0])
+
 
 def main():
     """
@@ -166,6 +183,6 @@ def main():
     welcome_message()
     questions_for_quiz()
     sort_into_house()
-
+    other_houses()
 
 main()
