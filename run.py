@@ -110,6 +110,7 @@ def questions_for_quiz():
 
     while (question_num < len(questions)):
         question = questions[question_num]
+        print()
         print(question["question"])
         print()
         print("Choices:")
@@ -140,7 +141,7 @@ def questions_for_quiz():
 
 def sort_into_house():
     """
-    conditional statement to sort user into house
+    conditional statement to sort user into house key for map look up s housenmap using house name
     """
     max_one = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
     max_two = max(HOUSES["HUFFLEPUFF"], HOUSES["GRYFFINDOR"], HOUSES["SLYTHERIN"])
@@ -159,21 +160,20 @@ def sort_into_house():
 
 
 def other_houses():
-    global HOUSES
     
-    houses = []
-    if "GRYFFINDOR" > 0:
-        houses.append("Gryffindor")
-    if "HUFFLEPUFF" > 0:
-        houses.append("Hufflepuff")
-    if "RAVENCLAW" > 0:
-        houses.append("Ravenclaw")
-    if "SLYTHERIN" > 0:
-        houses.append("Slytherin")
+    possible_houses = []
+    if HOUSES["GRYFFINDOR"] > 0:
+        possible_houses.append("Gryffindor")
+    if HOUSES["HUFFLEPUFF"] > 0:
+        possible_houses.append("Hufflepuff")
+    if HOUSES["RAVENCLAW"] > 0:
+        possible_houses.append("Ravenclaw")
+    if HOUSES["SLYTHERIN"] > 0:
+        possible_houses.append("Slytherin")
 
     print("you could have been in....")
-    for house in houses:
-        print(house[0])
+    for house in possible_houses:
+        print(house)
 
 
 def main():
