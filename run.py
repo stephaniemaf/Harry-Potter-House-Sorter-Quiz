@@ -75,26 +75,31 @@ def questions_for_quiz():
                     ]
                 },
                 {
-                    "question": "Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary."
+                    "question": "Once every century, the Flutterby bush produces"
+                    + "flowers that adapt their scent to attract the unwary."
                     + "If it lured you, it would smell of?",
                     "choices": [
-                        ("a) A crackling log fire", "GRYFFINDOR" ),
+                        ("a) A crackling log fire", "GRYFFINDOR"),
                         ("b) Fresh Parchment", "RAVENCLAW"),
                         ("c) Home", "HUFFLEPUFF"),
                         ("d) The sea", "SLYTHERIN"),
                     ]
                 },
                 {
-                    "question": "Four goblets are placed before you. Which would you choose to drink?",
+                    "question": "Four goblets are placed before you."
+                    + "Which would you choose to drink?",
                     "choices": [
                         ("a) The mysterious black liquid.", "SLYTHERIN"),
-                        ("b) The smooth, thick, richly purple drink.", "HUFFLEPUFF"),
+                        ("b) The smooth, thick, richly purple drink.",
+                         "HUFFLEPUFF"),
                         ("c) The golden liquid.", "GRYFFINDOR"),
-                        ("d) The foaming, frothing, silvery liquid", "RAVENCLAW"),
+                        ("d) The foaming, frothing, silvery liquid",
+                         "RAVENCLAW"),
                     ]
                 },
                 {
-                    "question": "Which of the following would you most hate people to call you?",
+                    "question": "Which of the following would you most hate"
+                    + "people to call you?",
                     "choices": [
                         ("a) Cowardly", "GRYFFINDOR"),
                         ("b) Ordinary", "SLYTHERIN"),
@@ -143,10 +148,18 @@ def sort_into_house():
     """
     conditional statement to sort user into house key for map look up s housenmap using house name
     """
-    max_one = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
-    max_two = max(HOUSES["HUFFLEPUFF"], HOUSES["GRYFFINDOR"], HOUSES["SLYTHERIN"])
-    max_three = max(HOUSES["GRYFFINDOR"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
-    max_four = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["GRYFFINDOR"])
+    max_one = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], 
+                  HOUSES["SLYTHERIN"])
+
+    max_two = max(HOUSES["HUFFLEPUFF"], HOUSES["GRYFFINDOR"],
+                  HOUSES["SLYTHERIN"])
+
+    max_three = max(HOUSES["GRYFFINDOR"], HOUSES["RAVENCLAW"],
+                    HOUSES["SLYTHERIN"])
+
+    max_four = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"],
+                   HOUSES["GRYFFINDOR"])
+                   
     if HOUSES["GRYFFINDOR"] > max_one:
         print("\nyou have been sorted into gryffindor")
     elif HOUSES["RAVENCLAW"] > max_two:
