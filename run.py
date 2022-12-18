@@ -148,15 +148,15 @@ def sort_into_house():
     max_three = max(HOUSES["GRYFFINDOR"], HOUSES["RAVENCLAW"], HOUSES["SLYTHERIN"])
     max_four = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], HOUSES["GRYFFINDOR"])
     if HOUSES["GRYFFINDOR"] > max_one:
-        print("you have been sorted into gryffindor")
+        print("\nyou have been sorted into gryffindor")
     elif HOUSES["RAVENCLAW"] > max_two:
-        print("you have been sorted into Ravenclaw")
+        print("\nyou have been sorted into Ravenclaw")
     elif HOUSES["HUFFLEPUFF"] > max_three:
-        print("you have been sorted into hufflepuff")
+        print("\nyou have been sorted into hufflepuff")
     elif HOUSES["SLYTHERIN"] > max_four:
-        print("you have been sorted into slytherin")
+        print("\nyou have been sorted into slytherin")
     else:
-        print("hmm you dont seem to be suitable to any house, try again!!")
+        print("\n hmm you dont seem to be suitable to any house, try again!!")
 
 
 def other_houses():
@@ -171,7 +171,8 @@ def other_houses():
     if HOUSES["SLYTHERIN"] > 0:
         possible_houses.append("Slytherin")
 
-    input(" Press enter to see what other houses you could have been in....")
+    input("Press enter to see what other houses you could have been in....")
+    print()
     for house in possible_houses:
         print(house)
 
