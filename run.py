@@ -65,19 +65,17 @@ def questions_for_quiz():
                 },
                 {
                     "question": "You're trapped in a burning"
-                    + "building.What do you do?",
+                    + "building. What do you do?",
                     "choices": [
-                        ("a) Run and Grab your friend whos trapped too", "GRYFFINDOR"),
+                        ("a) Run and Grab your friend\nwhos trapped too", "GRYFFINDOR"),
                         ("b) Save yourself, of course!!", "SLYTHERIN"),
-                        ("c) Give it a shot but your not sure you can save your friend", "HUFFLEPUFF"),
-                        ("d) It depends if you can save your friend you will,"
+                        ("c) Give it a shot but your not sure\nyou can save your friend", "HUFFLEPUFF"),
+                        ("d) It depends if you can\nsave your friend you will,"
                          + "if not...your just gonna run.", "RAVENCLAW"),
                     ]
                 },
                 {
-                    "question": "Once every century, the Flutterby bush produces"
-                    + "flowers that adapt their scent to attract the unwary."
-                    + "If it lured you, it would smell of?",
+                    "question": "What would the fluttby\nflower smell like to you",
                     "choices": [
                         ("a) A crackling log fire", "GRYFFINDOR"),
                         ("b) Fresh Parchment", "RAVENCLAW"),
@@ -146,7 +144,8 @@ def questions_for_quiz():
 
 def sort_into_house():
     """
-    conditional statement to sort user into house key for map look up s housenmap using house name
+    conditional statement to sort user into house this looks up gthe key in the
+    house map using the house name
     """
     max_one = max(HOUSES["HUFFLEPUFF"], HOUSES["RAVENCLAW"], 
                   HOUSES["SLYTHERIN"])
