@@ -156,7 +156,7 @@ def sort_into_house():
     elif HOUSES["SLYTHERIN"] > max_four:
         print("you have been sorted into slytherin")
     else:
-        print("hmm you dont seem to be in any house you can pick your own ")
+        print("hmm you dont seem to be suitable to any house, try again!!")
 
 
 def other_houses():
@@ -171,7 +171,7 @@ def other_houses():
     if HOUSES["SLYTHERIN"] > 0:
         possible_houses.append("Slytherin")
 
-    print("you could have been in....")
+    input(" Press enter to see what other houses you could have been in....")
     for house in possible_houses:
         print(house)
 
