@@ -9,24 +9,26 @@ HOUSES = {
  "SLYTHERIN": 0,
 }
 
+
 def welcome_message():
     """
     Welcome message for quiz game asking for name and inserting it
     into said message
     """
 
-    name = input("what is you name: ")
+    name = input("what is you name: \n")
 
     print("")
     print("*" * 80)
-    print(f"Welcome {name} to the Harry Potter sorting quiz. Answer these 7 questions")
+    print(f"Welcome {name} to the Harry Potter sorting quiz." 
+          "Answer these 7 questions")
     print("honestly, and at the end of this quiz you will be sorted into your")
     print("Hogwarts House where you will spend the next 7yrs studying magic")
     print("at the greatest school of Witchcraft and Wizardry. Best of luck!!")
     print("")
     print("*" * 80)
 
-    input("Are you ready press enter to begin...")
+    input("Are you ready press enter to begin...\n")
 
 
 def questions_for_quiz():
@@ -57,8 +59,8 @@ def questions_for_quiz():
                 {
                     "question": "Which potion would you rather have?",
                     "choices": [
-                        ("a) Glory", "GRYFFINDOR"), 
-                        ("b) Wisdom", "RAVENCLAW"), 
+                        ("a) Glory", "GRYFFINDOR"),
+                        ("b) Wisdom", "RAVENCLAW"),
                         ("c) Love", "HUFFLEPUFF"),
                         ("d) Power", "SLYTHERIN"),
                     ]
@@ -67,15 +69,18 @@ def questions_for_quiz():
                     "question": "You're trapped in a burning"
                     + "building. What do you do?",
                     "choices": [
-                        ("a) Run and Grab your friend\nwhos trapped too", "GRYFFINDOR"),
+                        ("a) Run and Grab your friend\nwhos trapped"
+                         "too", "GRYFFINDOR"),
                         ("b) Save yourself, of course!!", "SLYTHERIN"),
-                        ("c) Give it a shot but your not sure\nyou can save your friend", "HUFFLEPUFF"),
+                        ("c) Give it a shot but your not sure\nyou can"
+                         "save your friend", "HUFFLEPUFF"),
                         ("d) It depends if you can\nsave your friend you will,"
                          + "if not...your just gonna run.", "RAVENCLAW"),
                     ]
                 },
                 {
-                    "question": "What would the fluttby\nflower smell like to you",
+                    "question": "What would the fluttby\nflower smell like"
+                    "to you",
                     "choices": [
                         ("a) A crackling log fire", "GRYFFINDOR"),
                         ("b) Fresh Parchment", "RAVENCLAW"),
@@ -105,10 +110,10 @@ def questions_for_quiz():
                         ("d) Ignorant", "RAVENCLAW"),
                     ]
                 }
-                
-                
+               
+               
                 ]
-    
+   
     question_num = 0
 
     while (question_num < len(questions)):
@@ -172,6 +177,11 @@ def sort_into_house():
 
 
 def other_houses():
+
+    """
+    conditional statment to let user know which other houses they"
+    "could have been in.
+    """
     
     possible_houses = []
     if HOUSES["GRYFFINDOR"] > 0:
@@ -183,7 +193,7 @@ def other_houses():
     if HOUSES["SLYTHERIN"] > 0:
         possible_houses.append("Slytherin")
 
-    input("Press enter to see what other houses you could have been in....")
+    input("Press enter to see what other houses you could have been in....\n")
     print()
     for house in possible_houses:
         print(house)
@@ -197,5 +207,6 @@ def main():
     questions_for_quiz()
     sort_into_house()
     other_houses()
+
 
 main()
