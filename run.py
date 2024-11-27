@@ -16,7 +16,7 @@ def welcome_message():
     into said message
     """
 
-    name = input("what is you name: \n")
+    name = input("what is your name: \n")
 
     print("")
     print("*" * 80)
